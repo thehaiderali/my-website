@@ -34,9 +34,6 @@ export default function Portfolio() {
     Languages: [
       'Javascript', 'Typescript', 'Python', 
     ],
-    Frameworks: [
-      'MERN', 'Next', 'FastAPI'
-    ],
     Design: [
       'Figma', 'Framer'
     ],
