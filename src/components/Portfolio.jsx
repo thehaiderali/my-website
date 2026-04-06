@@ -37,9 +37,6 @@ export default function Portfolio() {
     Frameworks: [
       'MERN', 'Next', 'FastAPI'
     ],
-    ORM: [
-      'Drizzle', 'Prisma'
-    ],
     Design: [
       'Figma', 'Framer'
     ],
