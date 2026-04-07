@@ -140,13 +140,13 @@ export default function Portfolio() {
           transition={{ delay: 0.9, duration: 0.4 }}
           className="text-xs text-gray-500 dark:text-gray-400 space-y-1"
         >
-          <p className="flex flex-wrap justify-center sm:justify-start sm:gap-1.5">
+          <p className="flex flex-wrap justify-center sm:justify-start gap-1 sm:gap-1.5">
             <a href="https://github.com/thehaiderali" className="hover:underline"> GitHub </a>
             <span className="hidden sm:inline"> · </span>
-            <span className="sm:hidden">, </span>
+            <span className="sm:hidden"> .  </span>
             <a href="https://twitter.com/thehaderali" className="hover:underline">Twitter</a>
             <span className="hidden sm:inline"> · </span>
-            <span className="sm:hidden">, </span>
+            <span className="sm:hidden">  .  </span>
             <a href="mailto:hyder6291@email.com" className="hover:underline">Email</a>
           </p>
         </motion.footer>
