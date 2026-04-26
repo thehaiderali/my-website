@@ -82,9 +82,7 @@ export default function Portfolio() {
           <p>
             I build across software, design, systems, and interfaces. I develop full-stack applications and focus on refining my craft through real projects.
           </p>
-          <p>
-            Currently exploring llms integrations.
-          </p>
+        
         </motion.div>
         
         <motion.section 
