@@ -2,6 +2,8 @@ import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { Moon, Sun } from 'lucide-react'; 
 import { Button } from '@/components/ui/button'; 
+import GitHubContributionsSection from './Github';
+
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false);
@@ -148,6 +150,19 @@ export default function Portfolio() {
             <a href="mailto:hyder6291@email.com" className="hover:underline">Email</a>
           </p>
         </motion.footer>
+       <motion.div 
+       initial={{
+        opacity:0
+       }}
+       animate={{
+        opacity:1
+       }}
+       transition={{
+        duration:1.5
+       }}
+       className='pt-10 -ml-3'>
+             <GitHubContributionsSection/>
+       </motion.div>
       </div>
     </div>
   );
