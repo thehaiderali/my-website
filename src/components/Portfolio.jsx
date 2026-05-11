@@ -160,7 +160,7 @@ export default function Portfolio() {
        transition={{
         duration:1.5
        }}
-       className='pt-10 -ml-3'>
+       className='pt-10 -ml-3 w-auto'>
              <GitHubContributionsSection/>
        </motion.div>
       </div>
