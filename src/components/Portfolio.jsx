@@ -43,7 +43,7 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black transition-colors duration-300">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-16 text-black dark:text-white relative">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-16 text-black dark:text-white relative">
         <motion.div
           initial={{ opacity: 0, filter: "blur(10px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
@@ -160,7 +160,7 @@ export default function Portfolio() {
        transition={{
         duration:1.5
        }}
-       className='pt-10 -ml-3 w-auto'>
+       className='pt-10 -ml-27 w-auto'>
              <GitHubContributionsSection/>
        </motion.div>
       </div>
