@@ -34,7 +34,7 @@ export default function Portfolio() {
 
   const toolCategories = {
     Languages: [
-      'Javascript', 'Typescript', 'Python', 
+       'Typescript', 'Python', 
     ],
     Design: [
       'Figma', 'Framer'
