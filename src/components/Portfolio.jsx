@@ -1,37 +1,9 @@
 import { motion } from 'motion/react';
-import { useState, useEffect } from 'react';
-import { Moon, Sun } from 'lucide-react'; 
-import { Button } from '@/components/ui/button'; 
+import { Link } from 'react-router-dom';
 import GitHubContributionsSection from './Github';
-
+import PageShell from './PageShell';
 
 export default function Portfolio() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    const isDark = localStorage.getItem('theme') === 'dark' ||
-      (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    
-    setDarkMode(isDark);
-    
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, []);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    if (!darkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  };
-
   const toolCategories = {
     Languages: [
        'Typescript', 'Python', 
@@ -42,23 +14,7 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black transition-colors duration-300">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-16 text-black dark:text-white relative">
-        <motion.div
-          initial={{ opacity: 0, filter: "blur(10px)" }}
-          animate={{ opacity: 1, filter: "blur(0px)" }}
-          transition={{ delay: 0.3, duration: 0.4 }}
-        >
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleDarkMode}
-            className="fixed top-4 right-4 rounded-full w-8 h-8 sm:w-10 sm:h-10 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors z-50"
-          >
-            {darkMode ? <Sun className="h-4 w-4 sm:h-5 sm:w-5" /> : <Moon className="h-4 w-4 sm:h-5 sm:w-5" />}
-          </Button>
-        </motion.div>
-
+    <PageShell>
         <motion.header 
           initial={{ opacity: 0, filter: "blur(10px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
@@ -93,9 +49,10 @@ export default function Portfolio() {
           transition={{ delay: 0.6, duration: 0.4 }}
           className="mb-8 sm:mb-12"
         >
-          <h2 className="text-sm font-semibold mb-3 sm:mb-4">Projects</h2>
+          <h2 className="text-sm font-semibold mb-3 sm:mb-4">Playground</h2>
           <div className="space-y-2 sm:space-y-3 text-gray-500 dark:text-gray-400 text-sm">
-            Check out Github
+            <p>Experiments, prototypes, and demos I&apos;m tinkering with.</p>
+            <Link to="/playground" className="hover:underline">Coming soon</Link>
           </div>
         </motion.section>
         
@@ -163,7 +120,6 @@ export default function Portfolio() {
        className='pt-10 -ml-27 w-auto'>
              <GitHubContributionsSection/>
        </motion.div>
-      </div>
-    </div>
+    </PageShell>
   );
 }

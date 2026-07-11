@@ -17,5 +17,11 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://thehaiderali.com/playground</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
